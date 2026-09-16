@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umragoo — Umra, Haj, Makka va Madina mehmonxonalari, aviachiptalar va vizalar</title>
+  <meta name="description" content="Umragoo — haj va umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar, Haramayn poyezdi va transport xizmatlarini eng yaxshi narxlarda bron qilish platformasi.">
+  <meta name="keywords" content="umra, haj, Makka mehmonxonalari, Madina mehmonxonalari, umra vizasi, Haramayn poyezdi, Jidda aviachipta, umragoo">
+  <meta property="og:site_name" content="Umragoo">
+  <meta property="og:title" content="Umragoo — Haj va Umra xizmatlari platformasi">
+  <meta property="og:description" content="Imon safaringizni barcha xizmatlarni bir joyga jamlagan ishonchli platforma orqali oson bron qiling.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uz_UZ">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ======== SVG ikonkalar ======== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-kaaba" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8-4 8 4v10l-8 4-8-4z"/><path d="M4 9l8 4 8-4M12 13v10"/><path d="M4 12h16" stroke-dasharray="1 2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6M15 6v6M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></symbol>
+    <symbol id="i-train" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M18 22l-2-3M8 15h.01M16 15h.01"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l2-4h16l2 4"/><path d="M2 7h20v3a3 3 0 0 1-6 0 3 3 0 0 1-8 0 3 3 0 0 1-6 0V7"/><path d="M4 13v8h16v-8M9 21v-5h6v5"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3zM21 11h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3z"/><path d="M3 11a9 9 0 0 1 18 0M21 16v2a4 4 0 0 1-4 4h-5"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 2.1 12 8l6 2.1-6 2.1L9.9 18 7.8 12.2 2 10.1l5.8-2.1z"/><path d="M18 15l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ======== Yuqori chiziq ======== -->
+<div class="topbar">
+  <div class="container">
+    <div class="left">
+      <span><svg><use href="#i-phone"/></svg>+998 71 200 00 00</span>
+      <span class="hide-m"><svg><use href="#i-mail"/></svg>info@umragoo.uz</span>
+    </div>
+    <div class="right">
+      <span class="hide-m"><svg><use href="#i-clock"/></svg>Har kuni 09:00 – 21:00</span>
+      <span><svg><use href="#i-moon"/></svg><span id="hijri-date">Hijriy sana</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== Header ======== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="#" class="logo" aria-label="Umragoo bosh sahifa">
+      <img src="assets/logo.svg" alt="">
+      <span>Umra<b>goo</b><small>Haj &amp; Umra platformasi</small></span>
+    </a>
+    <nav class="nav" aria-label="Asosiy menyu">
+      <a href="#haj">Haj</a>
+      <a href="#umra">Umra</a>
+      <a href="#mehmonxonalar">Mehmonxonalar</a>
+      <a href="#vizalar">Vizalar</a>
+      <a href="#aviachiptalar">Aviachiptalar</a>
+      <a href="#poyezd">Poyezd</a>
+      <a href="#hamkorlik">Hamkorlik</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#" class="gift-link" data-open="promo"><svg><use href="#i-gift"/></svg>Sovg'alar va aksiyalar</a>
+      <div class="pill-select" id="lang-select" aria-label="Til">
+        <button class="active" data-lang="uz">UZ</button><button data-lang="ru">RU</button>
+      </div>
+      <div class="pill-select" id="cur-select" aria-label="Valyuta">
+        <button class="active" data-cur="USD">USD</button><button data-cur="UZS">UZS</button>
+      </div>
+      <button class="btn btn-primary btn-sm btn-login" data-open="login"><svg><use href="#i-user"/></svg>Kirish</button>
+      <button class="burger" id="burger" aria-label="Menyuni ochish"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#haj">Haj dasturlari</a>
+    <a href="#umra">Umra paketlari</a>
+    <a href="#mehmonxonalar">Mehmonxonalar</a>
+    <a href="#vizalar">Vizalar</a>
+    <a href="#aviachiptalar">Aviachiptalar</a>
+    <a href="#poyezd">Haramayn poyezdi</a>
+    <a href="#hamkorlik">Hamkorlik</a>
+    <div class="row">
+      <button class="btn btn-primary btn-sm" data-open="login"><svg><use href="#i-user"/></svg>Kirish</button>
+      <button class="btn btn-outline btn-sm" data-open="promo"><svg><use href="#i-gift"/></svg>Aksiyalar</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ======== Hero ======== -->
+<section class="hero" id="bosh">
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="pattern"></div>
+  <div class="container">
+    <span class="badge badge-dark"><svg width="14" height="14"><use href="#i-shield"/></svg>&nbsp;Litsenziyalangan platforma · O'zbekiston</span>
+    <div class="bismillah" style="margin-top:18px">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <h1>Haramayn sari safaringiz <em>shu yerdan boshlanadi</em></h1>
+    <p class="sub">Umragoo — haj va umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar va transportni bir joyda jamlagan ishonchli sherigingiz.</p>
+
+    <form class="hero-search" id="hero-search">
+      <div class="field">
+        <svg><use href="#i-search"/></svg>
+        <input type="text" id="search-input" placeholder="Haj, umra, mehmonxona qidiring...">
+      </div>
+      <select id="search-cat" aria-label="Kategoriya">
+        <option value="all">Barchasi</option>
+        <option value="haj">Haj</option>
+        <option value="umra">Umra</option>
+        <option value="mehmonxonalar">Mehmonxona</option>
+        <option value="vizalar">Viza</option>
+        <option value="aviachiptalar">Aviachipta</option>
+      </select>
+      <button type="submit" class="btn btn-primary">Qidirish</button>
+    </form>
+
+    <div class="hero-ctas">
+      <a href="#haj" class="btn btn-gold"><svg><use href="#i-kaaba"/></svg>Haj dasturlari</a>
+      <a href="#umra" class="btn btn-ghost-light"><svg><use href="#i-moon"/></svg>Umra paketlari</a>
+    </div>
+
+    <div class="hero-chips">
+      <span class="chip"><svg><use href="#i-moon"/></svg>Ramazongacha <b id="cd-ramadan">—</b> kun</span>
+      <span class="chip"><svg><use href="#i-kaaba"/></svg>Hajgacha <b id="cd-hajj">—</b> kun</span>
+      <span class="chip"><svg><use href="#i-sparkles"/></svg>Ota-onangiz uchun duo qiling — ularni rozi qilish jannat yo'lidir</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><b>50 000+</b><span>Haj va umra ziyoratchilari</span></div>
+      <div class="stat"><b>24/7</b><span>Uzluksiz qo'llab-quvvatlash</span></div>
+      <div class="stat"><b>15+</b><span>Yillik tajriba</span></div>
+      <div class="stat"><b>4.9 ★</b><span>Mijozlar bahosi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Xizmatlar ======== -->
+<section class="services" id="xizmatlar">
+  <div class="container">
+    <div class="svc-nav">
+      <button class="round-btn" data-scroll="#svc-track" data-dir="-1" aria-label="Oldingi"><svg><use href="#i-chev-l"/></svg></button>
+      <button class="round-btn" data-scroll="#svc-track" data-dir="1" aria-label="Keyingi"><svg><use href="#i-chev-r"/></svg></button>
+    </div>
+    <div class="track" id="svc-track">
+      <a href="#haj" class="svc"><span class="ic"><svg><use href="#i-kaaba"/></svg></span><h3>Haj dasturlari</h3><p>Umr safari — mukammal tashkil etilgan</p></a>
+      <a href="#umra" class="svc"><span class="ic"><svg><use href="#i-moon"/></svg></span><h3>Umra dasturlari</h3><p>Yil davomida to'liq paketlar</p></a>
+      <a href="#mehmonxonalar" class="svc"><span class="ic"><svg><use href="#i-bed"/></svg></span><h3>Mehmonxonalar</h3><p>Haramga yaqin qulay joylashuv</p></a>
+      <a href="#vizalar" class="svc"><span class="ic"><svg><use href="#i-file"/></svg></span><h3>Vizalar</h3><p>Tez va ishonchli rasmiylashtirish</p></a>
+      <a href="#aviachiptalar" class="svc"><span class="ic"><svg><use href="#i-plane"/></svg></span><h3>Aviachiptalar</h3><p>Barcha yo'nalishlarga eng yaxshi narxlar</p></a>
+      <a href="#sorov" class="svc"><span class="ic"><svg><use href="#i-bus"/></svg></span><h3>Transport</h3><p>VIP darajadagi xususiy transfer</p></a>
+      <a href="#poyezd" class="svc"><span class="tag">Yangi</span><span class="ic"><svg><use href="#i-train"/></svg></span><h3>Haramayn poyezdi</h3><p>Makka ↔ Madina tez va qulay</p></a>
+      <a href="#sorov" class="svc"><span class="ic"><svg><use href="#i-store"/></svg></span><h3>Onlayn do'kon</h3><p>Ehrom va safar anjomlari</p></a>
+      <a href="#sorov" class="svc"><span class="ic"><svg><use href="#i-sliders"/></svg></span><h3>Moslashuvchan dastur</h3><p>Safaringizni o'zingiz loyihalang</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Haj dasturlari ======== -->
+<section class="section" id="haj">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-kaaba"/></svg>&nbsp;Haj dasturlari</span>
+        <h2 style="margin-top:10px">Eng sara haj dasturlari</h2>
+        <p>Toshkentdan jo'nab ketuvchi, litsenziyalangan kompaniyalar tomonidan tashkil etilgan to'liq paketlar.</p>
+      </div>
+      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
+    </div>
+    <div class="grid grid-4 reveal" id="hajj-grid"></div>
+  </div>
+</section>
+
+<!-- ======== Umra dasturlari ======== -->
+<section class="section" id="umra" style="background:#fff;border-block:1px solid var(--border)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-moon"/></svg>&nbsp;Umra dasturlari</span>
+        <h2 style="margin-top:10px">Eng sara umra paketlari</h2>
+        <p>Ramazon, Laylatul Qadr, oilaviy va tejamkor umra dasturlari — aviachipta, mehmonxona va viza bilan birga.</p>
+      </div>
+      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
+    </div>
+    <div class="grid grid-4 reveal" id="umrah-grid"></div>
+  </div>
+</section>
+
+<!-- ======== Mehmonxonalar ======== -->
+<section class="section" id="mehmonxonalar">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-bed"/></svg>&nbsp;Mehmonxonalar</span>
+        <h2 style="margin-top:10px">Mehmonxona takliflari</h2>
+        <p>Masjidul Haram va Masjidun Nabaviyga eng yaqin mehmonxonalar — eng arzon narx kafolati bilan.</p>
+      </div>
+      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
+    </div>
+    <div class="grid grid-3 reveal" id="hotels-grid"></div>
+  </div>
+</section>
+
+<!-- ======== Vizalar ======== -->
+<section class="section" id="vizalar" style="background:#fff;border-block:1px solid var(--border)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-file"/></svg>&nbsp;Vizalar</span>
+        <h2 style="margin-top:10px">Viza takliflari</h2>
+        <p>Saudiya Arabistoniga umra, turistik, elektron va tranzit vizalarni tez va ishonchli rasmiylashtiramiz.</p>
+      </div>
+      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
+    </div>
+    <div class="grid grid-4 reveal" id="visa-grid"></div>
+  </div>
+</section>
+
+<!-- ======== Aviachiptalar ======== -->
+<section class="section" id="aviachiptalar">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-plane"/></svg>&nbsp;Aviachiptalar</span>
+        <h2 style="margin-top:10px">Aviachipta takliflari</h2>
+        <p>Toshkentdan Jidda va Madinaga to'g'ridan-to'g'ri hamda qulay ulanishli reyslar.</p>
+      </div>
+      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
+    </div>
+    <div class="flights-list reveal" id="flights-list"></div>
+  </div>
+</section>
+
+<!-- ======== Haramayn poyezdi ======== -->
+<section class="section" id="poyezd" style="padding-top:0">
+  <div class="container">
+    <div class="train-banner reveal">
+      <div class="txt">
+        <span class="badge badge-gold">Yangi xizmat</span>
+        <h3>Haramayn tezyurar poyezdi</h3>
+        <p>Makka, Madina va Jidda o'rtasida poyezd chiptalarini oson va tez bron qiling. Soatiga 300 km tezlik — Makkadan Madinaga atigi 2 soat 20 daqiqada.</p>
+        <div class="train-facts">
+          <span><svg><use href="#i-clock"/></svg>2 s 20 daq</span>
+          <span><svg><use href="#i-zap"/></svg>300 km/soat</span>
+          <span><svg><use href="#i-check-circle"/></svg>Elektron chipta</span>
+        </div>
+        <button class="btn btn-gold" data-open="request" data-service="Haramayn poyezdi">Poyezdni bron qilish <svg><use href="#i-arrow-r"/></svg></button>
+      </div>
+      <div class="img"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Moslashuvchan so'rov ======== -->
+<section class="section" id="sorov">
+  <div class="container">
+    <div class="flex-cta reveal">
+      <div>
+        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-sliders"/></svg>&nbsp;Maxsus xizmat</span>
+        <h2>Izlaganingizni topa olmadingizmi?</h2>
+        <p class="lead">Bizga moslashuvchan so'rovingizni yuboring — mutaxassislar jamoasi siz bilan bog'lanib, ehtiyoj va byudjetingizga mos ideal safarni loyihalab beradi.</p>
+        <div class="btns">
+          <button class="btn btn-primary" data-open="request"><svg><use href="#i-send"/></svg>So'rovingizni yuboring</button>
+          <a href="#umra" class="btn btn-outline">Paketlarni ko'rish</a>
+        </div>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span class="ic"><svg><use href="#i-sliders"/></svg></span><b>Maxsus loyiha</b><span>Aynan siz uchun tuzilgan safar</span></div>
+        <div class="benefit"><span class="ic"><svg><use href="#i-zap"/></svg></span><b>Tezkor javob</b><span>24 soat ichida</span></div>
+        <div class="benefit"><span class="ic"><svg><use href="#i-award"/></svg></span><b>Sifat kafolati</b><span>Ishonchli va litsenziyalangan xizmat</span></div>
+        <div class="benefit"><span class="ic"><svg><use href="#i-headset"/></svg></span><b>To'liq qo'llab-quvvatlash</b><span>Har bir qadamda siz bilan</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Hamkorlik ======== -->
+<section class="section" id="hamkorlik" style="background:#fff;border-block:1px solid var(--border)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-briefcase"/></svg>&nbsp;Kompaniyalar va agentliklar uchun</span>
+        <h2 style="margin-top:10px">Umragoo bilan hamkorlik qiling</h2>
+        <p>Sayyohlik agentligi, mehmonxona yoki transport kompaniyangiz bormi? Xizmatlaringizni minglab ziyoratchilarga taqdim eting.</p>
+      </div>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="partner marketer">
+        <span class="ic"><svg><use href="#i-megaphone"/></svg></span>
+        <h3>Marketolog sifatida qo'shiling</h3>
+        <p>Shaxsiy promo-kod oling va siz orqali amalga oshirilgan har bir bron uchun komissiya ishlang. Mijozlar va daromadingizni yagona kabinetdan boshqaring.</p>
+        <ul>
+          <li><svg><use href="#i-check-circle"/></svg>Har bir brondan komissiya</li>
+          <li><svg><use href="#i-check-circle"/></svg>Shaxsiy promo-kod va havola</li>
+          <li><svg><use href="#i-check-circle"/></svg>Statistika va to'lovlar paneli</li>
+        </ul>
+        <button class="btn" data-open="request" data-service="Marketolog sifatida qo'shilish">Hozir boshlash <svg><use href="#i-arrow-r"/></svg></button>
+      </div>
+      <div class="partner supplier">
+        <span class="ic"><svg><use href="#i-building"/></svg></span>
+        <h3>Xizmat ta'minotchisi sifatida qo'shiling</h3>
+        <p>Dasturlaringiz, mehmonxonalaringiz va xizmatlaringizni haj va umra izlayotgan minglab foydalanuvchilarga taqdim eting. So'rovlar va to'lovlarni kuzatib boring.</p>
+        <ul>
+          <li><svg><use href="#i-check-circle"/></svg>Oyiga minglab mijozlar</li>
+          <li><svg><use href="#i-check-circle"/></svg>Ishonchli va tasdiqlangan platforma</li>
+          <li><svg><use href="#i-check-circle"/></svg>Uzluksiz texnik yordam</li>
+        </ul>
+        <button class="btn" data-open="request" data-service="Ta'minotchi sifatida qo'shilish">Hozir boshlash <svg><use href="#i-arrow-r"/></svg></button>
+      </div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="n">1</span><div><b>So'rov yuboring</b><span>Kompaniya va xizmatlaringiz haqida ma'lumot kiriting</span></div></div>
+      <div class="step"><span class="n">2</span><div><b>Tekshiruv va tasdiqlash</b><span>Jamoamiz so'rovingizni 24–48 soat ichida ko'rib chiqadi</span></div></div>
+      <div class="step"><span class="n">3</span><div><b>Ishni boshlang!</b><span>Dasturlaringizni qo'shing va bronlarni darhol qabul qiling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Sharhlar ======== -->
+<section class="section testimonials" id="sharhlar">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="badge badge-dark"><svg width="13" height="13"><use href="#i-star"/></svg>&nbsp;Sharhlar</span>
+        <h2 style="margin-top:10px">Mijozlarimiz fikri</h2>
+        <p>Umragoo bilan safar qilgan ziyoratchilarning samimiy taassurotlari.</p>
+        <div class="t-summary"><b>4.9</b><span>o'rtacha baho · <span id="review-count">0</span> ta sharh</span></div>
+      </div>
+      <div class="t-controls">
+        <button class="btn btn-gold btn-sm" data-open="review"><svg><use href="#i-message"/></svg>Fikr qoldirish</button>
+        <button class="round-btn" data-scroll="#t-track" data-dir="-1" aria-label="Oldingi"><svg><use href="#i-chev-l"/></svg></button>
+        <button class="round-btn" data-scroll="#t-track" data-dir="1" aria-label="Keyingi"><svg><use href="#i-chev-r"/></svg></button>
+      </div>
+    </div>
+    <div class="t-track" id="t-track"></div>
+  </div>
+</section>
+
+<!-- ======== Mobil ilova ======== -->
+<section class="section" id="ilova">
+  <div class="container">
+    <div class="app-banner reveal">
+      <div>
+        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-smartphone"/></svg>&nbsp;Mobil ilova</span>
+        <h3 style="margin-top:10px">Safaringizni to'liq telefoningizdan boshqaring</h3>
+        <p>Bronlar, to'lovlar, viza holati va yo'l-yo'riqlar — iOS va Android ilovamizda. Tez orada!</p>
+      </div>
+      <div class="store-btns">
+        <a href="#" class="store-btn" data-toast="Ilova tez orada App Store'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span>Yuklab olish<b>App Store</b></span></a>
+        <a href="#" class="store-btn" data-toast="Ilova tez orada Google Play'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.61 1.81 13.79 12 3.61 22.19c-.36-.2-.61-.6-.61-1.07V2.88c0-.47.25-.87.61-1.07zm11.6 11.6 2.86 2.86-11.07 6.36c-.5.29-1.08.28-1.55.04l9.76-9.26zm3.94-2.75 3.02 1.73c.99.57.99 2.05 0 2.62l-3.02 1.73-3.13-3.04 3.13-3.04zM5.39 1.33c.47-.24 1.05-.25 1.55.04l11.07 6.36-2.86 2.86-9.76-9.26z"/></svg><span>Yuklab olish<b>Google Play</b></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======== Footer ======== -->
+<footer class="footer" id="aloqa">
+  <div class="container">
+    <div class="top">
+      <div>
+        <a href="#" class="logo"><img src="assets/logo.svg" alt=""><span>Umra<b>goo</b><small>Haj &amp; Umra platformasi</small></span></a>
+        <p class="about">Umragoo'da biz siz uchun mukammal va bezovtaliksiz imon safarini loyihalaymiz. Umra va haj paketlarini kashf eting, aviachipta va mehmonxonalarni bron qiling — qolgan barcha tafsilotlarni bizga qoldiring va ibodatingizga to'liq bag'ishlaning.</p>
+        <p class="motto">Sizga xizmat qilish — biz uchun sharaf va savob</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Xizmatlarimiz</h4>
+        <ul>
+          <li><a href="#umra">Umra paketlari</a></li>
+          <li><a href="#haj">Haj paketlari</a></li>
+          <li><a href="#aviachiptalar">Aviachiptalar</a></li>
+          <li><a href="#mehmonxonalar">Mehmonxonalar</a></li>
+          <li><a href="#vizalar">Vizalar</a></li>
+          <li><a href="#poyezd">Haramayn poyezdi</a></li>
+          <li><a href="#sorov">Transport</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ma'lumot</h4>
+        <ul>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Biz haqimizda</a></li>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Ko'p so'raladigan savollar</a></li>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Rasmiy litsenziyalar</a></li>
+          <li><a href="#" data-open="request">Shikoyat va takliflar</a></li>
+          <li><a href="#hamkorlik">Marketolog kabineti</a></li>
+          <li><a href="#hamkorlik">Ta'minotchi paneli</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Huquqiy</h4>
+        <ul>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Maxfiylik siyosati</a></li>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Foydalanish shartlari</a></li>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Bekor qilish siyosati</a></li>
+          <li><a href="#" data-toast="Sahifa tayyorlanmoqda">Umumiy qoidalar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Biz bilan bog'laning</h4>
+        <ul class="contact">
+          <li><svg><use href="#i-phone"/></svg><span>+998 71 200 00 00<br>+998 90 000 00 00 (WhatsApp)</span></li>
+          <li><svg><use href="#i-mail"/></svg><span>info@umragoo.uz</span></li>
+          <li><svg><use href="#i-pin"/></svg><span>Toshkent sh., Yunusobod tumani, Amir Temur shoh ko'chasi, 108</span></li>
+          <li><svg><use href="#i-headset"/></svg><span>Mijozlarni qo'llab-quvvatlash 24/7</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="licenses">
+      <span class="lic"><svg><use href="#i-shield"/></svg>Turizm qo'mitasi litsenziyasi</span>
+      <span class="lic"><svg><use href="#i-check-circle"/></svg>Elektron tijorat ro'yxati</span>
+      <span class="lic"><svg><use href="#i-file"/></svg>Davlat ro'yxatidan o'tgan</span>
+      <span class="lic"><svg><use href="#i-award"/></svg>Nusuk rasmiy hamkori</span>
+      <span class="lic"><svg><use href="#i-clipboard"/></svg>STIR: 000 000 000</span>
+    </div>
+    <div class="bottom">
+      <span>© <span id="year"></span> Umragoo — Barcha huquqlar himoyalangan · Sabringiz uchun Alloh rozi bo'lsin</span>
+      <div class="legal">
+        <a href="#" data-toast="Sahifa tayyorlanmoqda">Maxfiylik siyosati</a>
+        <a href="#" data-toast="Sahifa tayyorlanmoqda">Xizmat shartlari</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== Suzuvchi tugmalar ======== -->
+<a class="fab-wa" href="https://wa.me/998900000000?text=Assalomu%20alaykum!%20Umragoo%20xizmatlari%20haqida%20ma%27lumot%20olmoqchiman." target="_blank" rel="noopener" aria-label="WhatsApp orqali yozish"><svg><use href="#i-wa"/></svg></a>
+<button class="fab-ai" id="fab-ai" aria-label="Aqlli yordamchi Rafiqni ochish">
+  <span class="b"><svg><use href="#i-sparkles"/></svg><span class="ai">AI</span><span class="dot"></span></span>
+  <small>Rafiq</small>
+</button>
+<button class="to-top" id="to-top" aria-label="Yuqoriga"><svg><use href="#i-arrow-up"/></svg></button>
+
+<!-- ======== Chat paneli ======== -->
+<div class="chat" id="chat" hidden>
+  <header>
+    <span class="av"><svg><use href="#i-sparkles"/></svg></span>
+    <div><b>Rafiq · Aqlli yordamchi</b><span>Odatda bir daqiqada javob beradi</span></div>
+    <button id="chat-close" aria-label="Yopish"><svg><use href="#i-x"/></svg></button>
+  </header>
+  <div class="msgs" id="chat-msgs">
+    <div class="msg bot">Assalomu alaykum! Men Rafiq — Umragoo yordamchisiman. Haj, umra, viza yoki mehmonxona bo'yicha savolingiz bo'lsa, bemalol so'rang 🕋</div>
+  </div>
+  <div class="quick" id="chat-quick">
+    <button>Umra narxlari</button>
+    <button>Viza qancha vaqt oladi?</button>
+    <button>Haj dasturlari</button>
+    <button>Operator bilan bog'lanish</button>
+  </div>
+  <form id="chat-form">
+    <input type="text" id="chat-input" placeholder="Savolingizni yozing..." autocomplete="off">
+    <button type="submit" aria-label="Yuborish"><svg><use href="#i-send"/></svg></button>
+  </form>
+</div>
+
+<!-- ======== Modal konteyner ======== -->
+<div id="modal-root"></div>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

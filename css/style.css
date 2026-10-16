@@ -55,8 +55,6 @@ p{margin:0}
 .btn-ghost-light:hover{background:#ffffff26}
 .btn-sm{padding:8px 14px;font-size:13px;border-radius:10px}
 .btn-block{width:100%}
-.btn-wa{background:#25D366;color:#fff}
-.btn-wa:hover{background:#1FAE54}
 
 /* ---- yuqori chiziq ---- */
 .topbar{background:var(--teal-900);color:#cfe7e4;font-size:12.5px}
@@ -293,11 +291,6 @@ p{margin:0}
 .footer .bottom .legal a:hover{color:var(--gold-300)}
 
 /* ---- suzuvchi tugmalar ---- */
-.fab-wa{position:fixed;bottom:22px;right:22px;z-index:55;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px #25d36699;transition:.2s}
-.fab-wa:hover{transform:scale(1.08);background:#1FAE54}
-.fab-wa svg{width:28px;height:28px;position:relative}
-.fab-wa::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.35;animation:ping 1.8s infinite}
-@keyframes ping{75%,100%{transform:scale(1.8);opacity:0}}
 .fab-ai{position:fixed;bottom:22px;left:22px;z-index:55;display:flex;flex-direction:column;align-items:center;gap:4px}
 .fab-ai .b{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--teal-700),var(--teal-500));display:grid;place-items:center;color:#fff;box-shadow:0 10px 30px -8px #00968e99;position:relative;transition:.2s}
 .fab-ai:hover .b{transform:scale(1.08)}
@@ -370,7 +363,7 @@ label.f input:focus,label.f select:focus,label.f textarea:focus{border-color:var
 .reveal.in{opacity:1;transform:none}
 
 /* ---- yuqoriga ---- */
-.to-top{position:fixed;bottom:92px;right:30px;z-index:54;width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid var(--border);color:var(--teal-800);display:grid;place-items:center;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:.2s}
+.to-top{position:fixed;bottom:22px;right:22px;z-index:54;width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid var(--border);color:var(--teal-800);display:grid;place-items:center;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:.2s}
 .to-top.show{opacity:1;pointer-events:auto}
 .to-top svg{width:18px;height:18px}
 
@@ -410,7 +403,6 @@ label.f input:focus,label.f select:focus,label.f textarea:focus{border-color:var
   .form-grid{grid-template-columns:1fr}
   .t-card{flex-basis:280px}
   .fab-ai small{display:none}
-  .to-top{right:22px;bottom:92px}
 }
 @media (max-width:440px){
   .benefits{grid-template-columns:1fr}

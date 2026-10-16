@@ -15,8 +15,8 @@ Hech qanday build yoki server kerak emas: `index.html` faylini brauzerda oching.
 
 ## Nimani o'zgartirish kerak
 
-1. **Telefon, pochta, manzil** — `index.html` ichida `+998 71 200 00 00`, `info@umragoo.uz` va WhatsApp havolasi `wa.me/998900000000` ni o'zingiznikiga almashtiring.
+1. **Telefon, pochta, manzil** — hozircha saytda yo'q. Kerak bo'lsa, `index.html` dagi yuqori chiziq (`topbar`) va footerdagi "Biz bilan bog'laning" bo'limiga qo'shing.
 2. **Narxlar va dasturlar** — `js/data.js`. Narxlar USD da; `usdToUzs` kursini yangilab turing.
 3. **Muhim sanalar** — `js/data.js` → `dates` (Ramazon, Haj, aksiya tugash sanasi).
 4. **Rasmlar** — hozir Unsplash havolalari ishlatilgan. O'z rasmlaringizni `assets/` papkasiga qo'yib, `data.js` va `style.css` dagi URL larni almashtiring.
-5. **Forma yuborish** — hozir demo (WhatsApp ga yo'naltiradi). Haqiqiy backend yoki Telegram-bot ulash uchun `js/main.js` dagi `request-form` bo'limini o'zgartiring.
+5. **Forma yuborish** — hozir demo (faqat tasdiq xabarini ko'rsatadi, hech qayerga yubormaydi). Haqiqiy backend yoki Telegram-bot ulash uchun `js/main.js` dagi `request-form` bo'limini o'zgartiring.

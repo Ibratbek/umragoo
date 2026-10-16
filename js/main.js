@@ -339,9 +339,7 @@
       closeModal(); toast("Xush kelibsiz! Tizimga muvaffaqiyatli kirdingiz (demo)");
     } else if (id === "request-form") {
       const fd = new FormData(e.target);
-      const text = encodeURIComponent(`Assalomu alaykum! Umragoo saytidan so'rov.\nIsm: ${fd.get("name")}\nTelefon: ${fd.get("phone")}\nXizmat: ${fd.get("service")}\nKishilar: ${fd.get("people")}\nSana: ${fd.get("date") || "-"}\nIzoh: ${fd.get("note") || "-"}`);
-      modal.innerHTML = successHtml("So'rovingiz qabul qilindi!", `Rahmat, ${esc(fd.get("name"))}! Mutaxassisimiz tez orada siz bilan bog'lanadi.`) +
-        `<div style="padding:0 24px 24px;text-align:center"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/998900000000?text=${text}">${ico("i-wa")}WhatsApp orqali ham yuborish</a></div>`;
+      modal.innerHTML = successHtml("So'rovingiz qabul qilindi!", `Rahmat, ${esc(fd.get("name"))}! Mutaxassisimiz tez orada siz bilan bog'lanadi.`);
       $$("[data-close]", root).forEach((b) => b.addEventListener("click", closeModal));
     } else if (id === "review-form") {
       const fd = new FormData(e.target);
@@ -365,7 +363,7 @@
     { k: ["umra", "narx", "paket"], a: `Umra paketlarimiz ${fmt(1150)} dan boshlanadi (7 kun, aviachipta + viza + mehmonxona). Ramazon umrasi ${fmt(1890)}, oilaviy paket ${fmt(2650)}. Batafsil "Umra" bo'limida ko'rishingiz mumkin.` },
     { k: ["viza", "vaqt", "muddat"], a: "Umra vizasi (Nusuk) odatda 3 ish kunida, turistik eVisa esa 5–7 ish kunida tayyor bo'ladi. Pasport kamida 6 oy amal qilishi kerak." },
     { k: ["haj"], a: `Haj dasturlari ${fmt(4950)} dan (Ekonom, 21 kun) ${fmt(14500)} gacha (VIP, 30 kun). O'rinlar cheklangan — erta bron qilishni tavsiya qilamiz.` },
-    { k: ["operator", "odam", "bog'lan", "telefon"], a: "Albatta! Operatorimiz bilan bog'lanish: +998 71 200 00 00 yoki WhatsApp orqali (pastdagi yashil tugma). Ish vaqti 09:00–21:00." },
+    { k: ["operator", "odam", "bog'lan", "telefon"], a: "Albatta! \"So'rov yuborish\" tugmasi orqali ma'lumot qoldiring — operatorimiz siz bilan bog'lanadi. Ish vaqti 09:00–21:00." },
     { k: ["mehmonxona", "otel", "hotel"], a: `Makka va Madinada Haramga 100–500 m masofadagi 3–5 yulduzli mehmonxonalar bor. Narxlar bir kecha uchun ${fmt(45)} dan boshlanadi.` },
     { k: ["poyezd", "train"], a: "Haramayn tezyurar poyezdi Makka–Madina yo'nalishida 2 soat 20 daqiqada yetib boradi. Chiptani biz orqali bron qilishingiz mumkin." },
     { k: ["salom", "assalom"], a: "Va alaykum assalom! Sizga qanday yordam bera olaman? 😊" },
@@ -374,7 +372,7 @@
   function reply(q) {
     const l = q.toLowerCase();
     const hit = answers.find((x) => x.k.some((k) => l.includes(k)));
-    return hit ? hit.a : "Savolingiz uchun rahmat! Aniq javob berish uchun mutaxassisimiz bog'lanishi kerak. \"So'rov yuborish\" tugmasi orqali ma'lumot qoldiring yoki WhatsApp orqali yozing.";
+    return hit ? hit.a : "Savolingiz uchun rahmat! Aniq javob berish uchun mutaxassisimiz bog'lanishi kerak. \"So'rov yuborish\" tugmasi orqali ma'lumot qoldiring.";
   }
   function addMsg(text, me) {
     const d = document.createElement("div");

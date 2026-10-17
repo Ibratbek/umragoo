@@ -1,0 +1,26 @@
+# Render.com uchun sozlama (Blueprint). Render paneli: New -> Blueprint -> shu repozitoriyni tanlang.
+# Sayt, admin panel va ma'lumotlar (data.js, parol, so'rovlar, rasmlar) doimiy diskda saqlanadi.
+services:
+  - type: web
+    name: umragoo
+    runtime: python
+    plan: starter
+    region: frankfurt
+    branch: main
+    buildCommand: python3 --version
+    startCommand: python3 server.py --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    autoDeploy: true
+    disk:
+      name: umragoo-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: UMRAGOO_STORAGE
+        value: /var/data
+      - key: UMRAGOO_TRUST_PROXY
+        value: "1"
+      # Birinchi ishga tushishdagi admin paroli (Render o'zi yaratadi: Environment bo'limida ko'rinadi).
+      # Admin panelda parol o'zgartirilgandan keyin bu qiymat ishlatilmaydi.
+      - key: UMRAGOO_ADMIN_PASSWORD
+        generateValue: true

@@ -36,13 +36,25 @@ from urllib.parse import unquote
 
 # ---------- yo'llar va sozlamalar ----------
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DATA_JS = os.path.join(ROOT, "js", "data.js")
-DATA_DIR = os.path.join(ROOT, "data")
+SEED_DATA_JS = os.path.join(ROOT, "js", "data.js")
+# Hostingda (masalan Render diski) o'zgaruvchan ma'lumotlar alohida doimiy papkada turadi:
+# UMRAGOO_STORAGE=/var/data -> data.js, private/ (parol, so'rovlar, zaxira) va uploads/ shu yerda.
+# Birinchi ishga tushishda data.js loyihadagi js/data.js dan nusxalanadi.
+STORAGE = os.environ.get("UMRAGOO_STORAGE", "").strip()
+if STORAGE:
+    DATA_JS = os.path.join(STORAGE, "data.js")
+    DATA_DIR = os.path.join(STORAGE, "private")
+    UPLOAD_DIR = os.path.join(STORAGE, "uploads")
+else:
+    DATA_JS = SEED_DATA_JS
+    DATA_DIR = os.path.join(ROOT, "data")
+    UPLOAD_DIR = os.path.join(ROOT, "assets", "uploads")
+# Reverse proxy (Render, Cloudflare) ortida mijozning haqiqiy IP manzilini sarlavhalardan olish
+TRUST_PROXY = os.environ.get("UMRAGOO_TRUST_PROXY", "").strip() not in ("", "0")
 CONFIG_FILE = os.path.join(DATA_DIR, "config.json")
 REQUESTS_FILE = os.path.join(DATA_DIR, "requests.json")
 REVIEWS_FILE = os.path.join(DATA_DIR, "reviews.json")
 BACKUP_DIR = os.path.join(DATA_DIR, "backups")
-UPLOAD_DIR = os.path.join(ROOT, "assets", "uploads")
 
 MARKER = "window.UMRAGOO_DATA ="
 DATA_JS_HEADER = """/* =====================================================
@@ -492,6 +504,13 @@ class Handler(SimpleHTTPRequestHandler):
 
     def client_ip(self):
         ip = self.client_address[0]
+        if TRUST_PROXY:  # hosting proxy'si ortida: Cloudflare/Render sarlavhalari
+            for name in ("CF-Connecting-IP", "True-Client-IP", "X-Real-IP"):
+                value = (self.headers.get(name) or "").strip()
+                if value:
+                    return value
+            forwarded = (self.headers.get("X-Forwarded-For") or "").split(",")[0].strip()
+            return forwarded or ip
         if ip in ("127.0.0.1", "::1"):  # shu kompyuterdagi reverse proxy orqali kelgan
             real = (self.headers.get("X-Real-IP") or "").strip()
             forwarded = (self.headers.get("X-Forwarded-For") or "").split(",")[-1].strip()
@@ -563,6 +582,19 @@ class Handler(SimpleHTTPRequestHandler):
         if path.lower() == "/js/data.js":
             del self.headers["If-Modified-Since"]  # saqlangandan keyin doim yangi nusxa berilsin
         return super().send_head()
+
+    def translate_path(self, path):
+        if STORAGE:  # data.js va yuklangan rasmlar doimiy papkadan beriladi
+            clean = self.clean_path()
+            if clean.lower() == "/js/data.js":
+                return DATA_JS
+            if clean.startswith("/assets/uploads/"):
+                name = clean[len("/assets/uploads/"):]
+                if name and not name.startswith(".") and "/" not in name and "\\" not in name:
+                    candidate = os.path.join(UPLOAD_DIR, name)
+                    if os.path.isfile(candidate):
+                        return candidate
+        return super().translate_path(path)
 
     def list_directory(self, path):
         self.send_error(404)  # papka ichini ko'rsatmaymiz
@@ -864,15 +896,27 @@ def _reject_constant(name):
 
 
 # ---------- ishga tushirish ----------
+def ensure_storage():
+    """Doimiy papka ishlatilsa, birinchi ishga tushishda data.js ni loyihadan nusxalaydi."""
+    if STORAGE and not os.path.exists(DATA_JS):
+        with open(SEED_DATA_JS, "rb") as f:
+            write_atomic(DATA_JS, f.read())
+
+
 def ensure_password():
-    """Parol hali o'rnatilmagan bo'lsa tasodifiy parol yaratadi va uni qaytaradi."""
+    """Parol hali o'rnatilmagan bo'lsa uni o'rnatadi: UMRAGOO_ADMIN_PASSWORD dan yoki tasodifiy.
+    Konsolda ko'rsatish kerak bo'lgan tasodifiy parolni qaytaradi."""
     with FILE_LOCK:
         cfg = load_config()
         if cfg.get("password_hash"):
             return None
-        password = secrets.token_urlsafe(9)
+        from_env = os.environ.get("UMRAGOO_ADMIN_PASSWORD", "").strip()
+        password = from_env if len(from_env) >= 8 else secrets.token_urlsafe(9)
         cfg["password_hash"] = hash_password(password)
         write_json(CONFIG_FILE, cfg)
+    if password == from_env:
+        print("Admin parol UMRAGOO_ADMIN_PASSWORD muhit o'zgaruvchisidan o'rnatildi.")
+        return None
     return password
 
 
@@ -907,6 +951,7 @@ def main():
             print(f"Xato: serverni {args.host}:{args.port} da ishga tushirib bo'lmadi ({e}).\n"
                   f"Port band bo'lishi mumkin — boshqa port tanlang: python3 server.py --port 8081", file=sys.stderr)
             return 1
+        ensure_storage()
         first_password = ensure_password()
     except ApiError as e:
         print(f"Xato: {e.message}", file=sys.stderr)

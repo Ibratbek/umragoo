@@ -1,0 +1,7 @@
+# Maxfiy ma'lumotlar: parol xeshi, mijozlar so'rovlari, sharhlar, zaxira nusxalar
+data/
+
+# Vaqtinchalik va tizim fayllari
+*.tmp
+.DS_Store
+__pycache__/

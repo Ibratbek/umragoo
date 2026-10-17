@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Umragoo — Umra, Haj, Makka va Madina mehmonxonalari, aviachiptalar va vizalar</title>
-  <meta name="description" content="Umragoo — haj va umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar, Haramayn poyezdi va transport xizmatlarini eng yaxshi narxlarda bron qilish platformasi.">
-  <meta name="keywords" content="umra, haj, Makka mehmonxonalari, Madina mehmonxonalari, umra vizasi, Haramayn poyezdi, Jidda aviachipta, umragoo">
+  <title>Umragoo — Umra, Makka va Madina mehmonxonalari, aviachiptalar va vizalar</title>
+  <meta name="description" content="Umragoo — umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar, Haramayn poyezdi va transport xizmatlarini eng yaxshi narxlarda bron qilish platformasi.">
+  <meta name="keywords" content="umra, umra paketlari, Makka mehmonxonalari, Madina mehmonxonalari, umra vizasi, Haramayn poyezdi, Jidda aviachipta, umragoo">
   <meta property="og:site_name" content="Umragoo">
-  <meta property="og:title" content="Umragoo — Haj va Umra xizmatlari platformasi">
+  <meta property="og:title" content="Umragoo — Umra xizmatlari platformasi">
   <meta property="og:description" content="Imon safaringizni barcha xizmatlarni bir joyga jamlagan ishonchli platforma orqali oson bron qiling.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="uz_UZ">
@@ -66,6 +66,8 @@
     <symbol id="i-telegram" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
     <symbol id="i-youtube" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
   </defs>
 </svg>
 
@@ -73,7 +75,8 @@
 <div class="topbar">
   <div class="container">
     <div class="left">
-      <span><svg><use href="#i-clock"/></svg>Har kuni 09:00 – 21:00</span>
+      <span id="topbar-hours" data-wrap><svg><use href="#i-clock"/></svg><span data-t="contacts.hours">Har kuni 09:00 – 21:00</span></span>
+      <a href="#" id="topbar-phone" hidden><svg><use href="#i-phone"/></svg><span></span></a>
     </div>
     <div class="right">
       <span><svg><use href="#i-moon"/></svg><span id="hijri-date">Hijriy sana</span></span>
@@ -86,10 +89,9 @@
   <div class="container">
     <a href="#" class="logo" aria-label="Umragoo bosh sahifa">
       <img src="assets/logo.svg" alt="">
-      <span>Umra<b>goo</b><small>Haj &amp; Umra platformasi</small></span>
+      <span>Umra<b>goo</b><small>Umra platformasi</small></span>
     </a>
     <nav class="nav" aria-label="Asosiy menyu">
-      <a href="#haj">Haj</a>
       <a href="#umra">Umra</a>
       <a href="#mehmonxonalar">Mehmonxonalar</a>
       <a href="#vizalar">Vizalar</a>
@@ -110,7 +112,6 @@
     </div>
   </div>
   <div class="mobile-nav" id="mobile-nav">
-    <a href="#haj">Haj dasturlari</a>
     <a href="#umra">Umra paketlari</a>
     <a href="#mehmonxonalar">Mehmonxonalar</a>
     <a href="#vizalar">Vizalar</a>
@@ -132,19 +133,18 @@
   <div class="overlay"></div>
   <div class="pattern"></div>
   <div class="container">
-    <span class="badge badge-dark"><svg width="14" height="14"><use href="#i-shield"/></svg>&nbsp;Litsenziyalangan platforma · O'zbekiston</span>
-    <div class="bismillah" style="margin-top:18px">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
-    <h1>Haramayn sari safaringiz <em>shu yerdan boshlanadi</em></h1>
-    <p class="sub">Umragoo — haj va umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar va transportni bir joyda jamlagan ishonchli sherigingiz.</p>
+    <span class="badge badge-dark" data-wrap><svg width="14" height="14"><use href="#i-shield"/></svg><span data-t="hero.badge">Litsenziyalangan platforma · O'zbekiston</span></span>
+    <div class="bismillah" style="margin-top:18px" data-t="hero.bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <h1><span data-t="hero.title">Haramayn sari safaringiz</span> <em data-t="hero.titleAccent">shu yerdan boshlanadi</em></h1>
+    <p class="sub" data-t="hero.subtitle">Umragoo — umra dasturlari, Makka va Madina mehmonxonalari, aviachiptalar, vizalar va transportni bir joyda jamlagan ishonchli sherigingiz.</p>
 
     <form class="hero-search" id="hero-search">
       <div class="field">
         <svg><use href="#i-search"/></svg>
-        <input type="text" id="search-input" placeholder="Haj, umra, mehmonxona qidiring...">
+        <input type="text" id="search-input" placeholder="Umra, mehmonxona, viza qidiring...">
       </div>
       <select id="search-cat" aria-label="Kategoriya">
         <option value="all">Barchasi</option>
-        <option value="haj">Haj</option>
         <option value="umra">Umra</option>
         <option value="mehmonxonalar">Mehmonxona</option>
         <option value="vizalar">Viza</option>
@@ -154,18 +154,17 @@
     </form>
 
     <div class="hero-ctas">
-      <a href="#haj" class="btn btn-gold"><svg><use href="#i-kaaba"/></svg>Haj dasturlari</a>
-      <a href="#umra" class="btn btn-ghost-light"><svg><use href="#i-moon"/></svg>Umra paketlari</a>
+      <a href="#umra" class="btn btn-gold"><svg><use href="#i-kaaba"/></svg>Umra paketlari</a>
+      <a href="#mehmonxonalar" class="btn btn-ghost-light"><svg><use href="#i-bed"/></svg>Mehmonxonalar</a>
     </div>
 
     <div class="hero-chips">
-      <span class="chip"><svg><use href="#i-moon"/></svg>Ramazongacha <b id="cd-ramadan">—</b> kun</span>
-      <span class="chip"><svg><use href="#i-kaaba"/></svg>Hajgacha <b id="cd-hajj">—</b> kun</span>
-      <span class="chip"><svg><use href="#i-sparkles"/></svg>Ota-onangiz uchun duo qiling — ularni rozi qilish jannat yo'lidir</span>
+      <span class="chip" id="chip-ramadan"><svg><use href="#i-moon"/></svg>Ramazongacha <b id="cd-ramadan">—</b> kun</span>
+      <span class="chip" data-wrap><svg><use href="#i-sparkles"/></svg><span data-t="hero.chip">Ota-onangiz uchun duo qiling — ularni rozi qilish jannat yo'lidir</span></span>
     </div>
 
-    <div class="hero-stats">
-      <div class="stat"><b>50 000+</b><span>Haj va umra ziyoratchilari</span></div>
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat"><b>50 000+</b><span>Umra ziyoratchilari</span></div>
       <div class="stat"><b>24/7</b><span>Uzluksiz qo'llab-quvvatlash</span></div>
       <div class="stat"><b>15+</b><span>Yillik tajriba</span></div>
       <div class="stat"><b>4.9 ★</b><span>Mijozlar bahosi</span></div>
@@ -181,8 +180,7 @@
       <button class="round-btn" data-scroll="#svc-track" data-dir="1" aria-label="Keyingi"><svg><use href="#i-chev-r"/></svg></button>
     </div>
     <div class="track" id="svc-track">
-      <a href="#haj" class="svc"><span class="ic"><svg><use href="#i-kaaba"/></svg></span><h3>Haj dasturlari</h3><p>Umr safari — mukammal tashkil etilgan</p></a>
-      <a href="#umra" class="svc"><span class="ic"><svg><use href="#i-moon"/></svg></span><h3>Umra dasturlari</h3><p>Yil davomida to'liq paketlar</p></a>
+      <a href="#umra" class="svc"><span class="ic"><svg><use href="#i-kaaba"/></svg></span><h3>Umra dasturlari</h3><p>Yil davomida to'liq paketlar</p></a>
       <a href="#mehmonxonalar" class="svc"><span class="ic"><svg><use href="#i-bed"/></svg></span><h3>Mehmonxonalar</h3><p>Haramga yaqin qulay joylashuv</p></a>
       <a href="#vizalar" class="svc"><span class="ic"><svg><use href="#i-file"/></svg></span><h3>Vizalar</h3><p>Tez va ishonchli rasmiylashtirish</p></a>
       <a href="#aviachiptalar" class="svc"><span class="ic"><svg><use href="#i-plane"/></svg></span><h3>Aviachiptalar</h3><p>Barcha yo'nalishlarga eng yaxshi narxlar</p></a>
@@ -194,29 +192,14 @@
   </div>
 </section>
 
-<!-- ======== Haj dasturlari ======== -->
-<section class="section" id="haj">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-kaaba"/></svg>&nbsp;Haj dasturlari</span>
-        <h2 style="margin-top:10px">Eng sara haj dasturlari</h2>
-        <p>Toshkentdan jo'nab ketuvchi, litsenziyalangan kompaniyalar tomonidan tashkil etilgan to'liq paketlar.</p>
-      </div>
-      <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
-    </div>
-    <div class="grid grid-4 reveal" id="hajj-grid"></div>
-  </div>
-</section>
-
 <!-- ======== Umra dasturlari ======== -->
-<section class="section" id="umra" style="background:#fff;border-block:1px solid var(--border)">
+<section class="section" id="umra" style="background:#fff;border-bottom:1px solid var(--border)">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-moon"/></svg>&nbsp;Umra dasturlari</span>
-        <h2 style="margin-top:10px">Eng sara umra paketlari</h2>
-        <p>Ramazon, Laylatul Qadr, oilaviy va tejamkor umra dasturlari — aviachipta, mehmonxona va viza bilan birga.</p>
+        <span class="badge badge-teal" data-wrap><svg width="13" height="13"><use href="#i-kaaba"/></svg><span data-t="sections.umra.badge">Umra dasturlari</span></span>
+        <h2 style="margin-top:10px" data-t="sections.umra.title">Eng sara umra paketlari</h2>
+        <p data-t="sections.umra.text">Ramazon, Laylatul Qadr, oilaviy va tejamkor umra dasturlari — aviachipta, mehmonxona va viza bilan birga.</p>
       </div>
       <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
     </div>
@@ -229,9 +212,9 @@
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-bed"/></svg>&nbsp;Mehmonxonalar</span>
-        <h2 style="margin-top:10px">Mehmonxona takliflari</h2>
-        <p>Masjidul Haram va Masjidun Nabaviyga eng yaqin mehmonxonalar — eng arzon narx kafolati bilan.</p>
+        <span class="badge badge-gold" data-wrap><svg width="13" height="13"><use href="#i-bed"/></svg><span data-t="sections.mehmonxonalar.badge">Mehmonxonalar</span></span>
+        <h2 style="margin-top:10px" data-t="sections.mehmonxonalar.title">Mehmonxona takliflari</h2>
+        <p data-t="sections.mehmonxonalar.text">Masjidul Haram va Masjidun Nabaviyga eng yaqin mehmonxonalar — eng arzon narx kafolati bilan.</p>
       </div>
       <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
     </div>
@@ -244,9 +227,9 @@
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-file"/></svg>&nbsp;Vizalar</span>
-        <h2 style="margin-top:10px">Viza takliflari</h2>
-        <p>Saudiya Arabistoniga umra, turistik, elektron va tranzit vizalarni tez va ishonchli rasmiylashtiramiz.</p>
+        <span class="badge badge-teal" data-wrap><svg width="13" height="13"><use href="#i-file"/></svg><span data-t="sections.vizalar.badge">Vizalar</span></span>
+        <h2 style="margin-top:10px" data-t="sections.vizalar.title">Viza takliflari</h2>
+        <p data-t="sections.vizalar.text">Saudiya Arabistoniga umra, turistik, elektron va tranzit vizalarni tez va ishonchli rasmiylashtiramiz.</p>
       </div>
       <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
     </div>
@@ -259,9 +242,9 @@
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-plane"/></svg>&nbsp;Aviachiptalar</span>
-        <h2 style="margin-top:10px">Aviachipta takliflari</h2>
-        <p>Toshkentdan Jidda va Madinaga to'g'ridan-to'g'ri hamda qulay ulanishli reyslar.</p>
+        <span class="badge badge-gold" data-wrap><svg width="13" height="13"><use href="#i-plane"/></svg><span data-t="sections.aviachiptalar.badge">Aviachiptalar</span></span>
+        <h2 style="margin-top:10px" data-t="sections.aviachiptalar.title">Aviachipta takliflari</h2>
+        <p data-t="sections.aviachiptalar.text">Toshkentdan Jidda va Madinaga to'g'ridan-to'g'ri hamda qulay ulanishli reyslar.</p>
       </div>
       <a href="#sorov" class="link-more">Barchasini ko'rish <svg><use href="#i-arrow-r"/></svg></a>
     </div>
@@ -274,15 +257,15 @@
   <div class="container">
     <div class="train-banner reveal">
       <div class="txt">
-        <span class="badge badge-gold">Yangi xizmat</span>
-        <h3>Haramayn tezyurar poyezdi</h3>
-        <p>Makka, Madina va Jidda o'rtasida poyezd chiptalarini oson va tez bron qiling. Soatiga 300 km tezlik — Makkadan Madinaga atigi 2 soat 20 daqiqada.</p>
-        <div class="train-facts">
+        <span class="badge badge-gold" data-t="train.badge">Yangi xizmat</span>
+        <h3 data-t="train.title">Haramayn tezyurar poyezdi</h3>
+        <p data-t="train.text">Makka, Madina va Jidda o'rtasida poyezd chiptalarini oson va tez bron qiling. Soatiga 300 km tezlik — Makkadan Madinaga atigi 2 soat 20 daqiqada.</p>
+        <div class="train-facts" id="train-facts">
           <span><svg><use href="#i-clock"/></svg>2 s 20 daq</span>
           <span><svg><use href="#i-zap"/></svg>300 km/soat</span>
           <span><svg><use href="#i-check-circle"/></svg>Elektron chipta</span>
         </div>
-        <button class="btn btn-gold" data-open="request" data-service="Haramayn poyezdi">Poyezdni bron qilish <svg><use href="#i-arrow-r"/></svg></button>
+        <button class="btn btn-gold" data-open="request" data-service="Haramayn poyezdi" data-wrap><span data-t="train.button">Poyezdni bron qilish</span> <svg><use href="#i-arrow-r"/></svg></button>
       </div>
       <div class="img"></div>
     </div>
@@ -294,15 +277,15 @@
   <div class="container">
     <div class="flex-cta reveal">
       <div>
-        <span class="badge badge-gold"><svg width="13" height="13"><use href="#i-sliders"/></svg>&nbsp;Maxsus xizmat</span>
-        <h2>Izlaganingizni topa olmadingizmi?</h2>
-        <p class="lead">Bizga moslashuvchan so'rovingizni yuboring — mutaxassislar jamoasi siz bilan bog'lanib, ehtiyoj va byudjetingizga mos ideal safarni loyihalab beradi.</p>
+        <span class="badge badge-gold" data-wrap><svg width="13" height="13"><use href="#i-sliders"/></svg><span data-t="cta.badge">Maxsus xizmat</span></span>
+        <h2 data-t="cta.title">Izlaganingizni topa olmadingizmi?</h2>
+        <p class="lead" data-t="cta.text">Bizga moslashuvchan so'rovingizni yuboring — mutaxassislar jamoasi siz bilan bog'lanib, ehtiyoj va byudjetingizga mos ideal safarni loyihalab beradi.</p>
         <div class="btns">
           <button class="btn btn-primary" data-open="request"><svg><use href="#i-send"/></svg>So'rovingizni yuboring</button>
           <a href="#umra" class="btn btn-outline">Paketlarni ko'rish</a>
         </div>
       </div>
-      <div class="benefits">
+      <div class="benefits" id="cta-benefits">
         <div class="benefit"><span class="ic"><svg><use href="#i-sliders"/></svg></span><b>Maxsus loyiha</b><span>Aynan siz uchun tuzilgan safar</span></div>
         <div class="benefit"><span class="ic"><svg><use href="#i-zap"/></svg></span><b>Tezkor javob</b><span>24 soat ichida</span></div>
         <div class="benefit"><span class="ic"><svg><use href="#i-award"/></svg></span><b>Sifat kafolati</b><span>Ishonchli va litsenziyalangan xizmat</span></div>
@@ -317,17 +300,17 @@
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-briefcase"/></svg>&nbsp;Kompaniyalar va agentliklar uchun</span>
-        <h2 style="margin-top:10px">Umragoo bilan hamkorlik qiling</h2>
-        <p>Sayyohlik agentligi, mehmonxona yoki transport kompaniyangiz bormi? Xizmatlaringizni minglab ziyoratchilarga taqdim eting.</p>
+        <span class="badge badge-teal" data-wrap><svg width="13" height="13"><use href="#i-briefcase"/></svg><span data-t="sections.hamkorlik.badge">Kompaniyalar va agentliklar uchun</span></span>
+        <h2 style="margin-top:10px" data-t="sections.hamkorlik.title">Umragoo bilan hamkorlik qiling</h2>
+        <p data-t="sections.hamkorlik.text">Sayyohlik agentligi, mehmonxona yoki transport kompaniyangiz bormi? Xizmatlaringizni minglab ziyoratchilarga taqdim eting.</p>
       </div>
     </div>
     <div class="grid grid-2 reveal">
       <div class="partner marketer">
         <span class="ic"><svg><use href="#i-megaphone"/></svg></span>
-        <h3>Marketolog sifatida qo'shiling</h3>
-        <p>Shaxsiy promo-kod oling va siz orqali amalga oshirilgan har bir bron uchun komissiya ishlang. Mijozlar va daromadingizni yagona kabinetdan boshqaring.</p>
-        <ul>
+        <h3 data-t="partners.marketer.title">Marketolog sifatida qo'shiling</h3>
+        <p data-t="partners.marketer.text">Shaxsiy promo-kod oling va siz orqali amalga oshirilgan har bir bron uchun komissiya ishlang. Mijozlar va daromadingizni yagona kabinetdan boshqaring.</p>
+        <ul id="marketer-points">
           <li><svg><use href="#i-check-circle"/></svg>Har bir brondan komissiya</li>
           <li><svg><use href="#i-check-circle"/></svg>Shaxsiy promo-kod va havola</li>
           <li><svg><use href="#i-check-circle"/></svg>Statistika va to'lovlar paneli</li>
@@ -336,9 +319,9 @@
       </div>
       <div class="partner supplier">
         <span class="ic"><svg><use href="#i-building"/></svg></span>
-        <h3>Xizmat ta'minotchisi sifatida qo'shiling</h3>
-        <p>Dasturlaringiz, mehmonxonalaringiz va xizmatlaringizni haj va umra izlayotgan minglab foydalanuvchilarga taqdim eting. So'rovlar va to'lovlarni kuzatib boring.</p>
-        <ul>
+        <h3 data-t="partners.supplier.title">Xizmat ta'minotchisi sifatida qo'shiling</h3>
+        <p data-t="partners.supplier.text">Dasturlaringiz, mehmonxonalaringiz va xizmatlaringizni umra safarini rejalashtirayotgan minglab foydalanuvchilarga taqdim eting. So'rovlar va to'lovlarni kuzatib boring.</p>
+        <ul id="supplier-points">
           <li><svg><use href="#i-check-circle"/></svg>Oyiga minglab mijozlar</li>
           <li><svg><use href="#i-check-circle"/></svg>Ishonchli va tasdiqlangan platforma</li>
           <li><svg><use href="#i-check-circle"/></svg>Uzluksiz texnik yordam</li>
@@ -346,7 +329,7 @@
         <button class="btn" data-open="request" data-service="Ta'minotchi sifatida qo'shilish">Hozir boshlash <svg><use href="#i-arrow-r"/></svg></button>
       </div>
     </div>
-    <div class="steps reveal">
+    <div class="steps reveal" id="partner-steps">
       <div class="step"><span class="n">1</span><div><b>So'rov yuboring</b><span>Kompaniya va xizmatlaringiz haqida ma'lumot kiriting</span></div></div>
       <div class="step"><span class="n">2</span><div><b>Tekshiruv va tasdiqlash</b><span>Jamoamiz so'rovingizni 24–48 soat ichida ko'rib chiqadi</span></div></div>
       <div class="step"><span class="n">3</span><div><b>Ishni boshlang!</b><span>Dasturlaringizni qo'shing va bronlarni darhol qabul qiling</span></div></div>
@@ -359,10 +342,10 @@
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="badge badge-dark"><svg width="13" height="13"><use href="#i-star"/></svg>&nbsp;Sharhlar</span>
-        <h2 style="margin-top:10px">Mijozlarimiz fikri</h2>
-        <p>Umragoo bilan safar qilgan ziyoratchilarning samimiy taassurotlari.</p>
-        <div class="t-summary"><b>4.9</b><span>o'rtacha baho · <span id="review-count">0</span> ta sharh</span></div>
+        <span class="badge badge-dark" data-wrap><svg width="13" height="13"><use href="#i-star"/></svg><span data-t="sections.sharhlar.badge">Sharhlar</span></span>
+        <h2 style="margin-top:10px" data-t="sections.sharhlar.title">Mijozlarimiz fikri</h2>
+        <p data-t="sections.sharhlar.text">Umragoo bilan safar qilgan ziyoratchilarning samimiy taassurotlari.</p>
+        <div class="t-summary" data-wrap><b data-t="reviewsSummary.rating">4.9</b><span>o'rtacha baho · <span id="review-count">376</span> ta sharh</span></div>
       </div>
       <div class="t-controls">
         <button class="btn btn-gold btn-sm" data-open="review"><svg><use href="#i-message"/></svg>Fikr qoldirish</button>
@@ -379,13 +362,13 @@
   <div class="container">
     <div class="app-banner reveal">
       <div>
-        <span class="badge badge-teal"><svg width="13" height="13"><use href="#i-smartphone"/></svg>&nbsp;Mobil ilova</span>
-        <h3 style="margin-top:10px">Safaringizni to'liq telefoningizdan boshqaring</h3>
-        <p>Bronlar, to'lovlar, viza holati va yo'l-yo'riqlar — iOS va Android ilovamizda. Tez orada!</p>
+        <span class="badge badge-teal" data-wrap><svg width="13" height="13"><use href="#i-smartphone"/></svg><span data-t="app.badge">Mobil ilova</span></span>
+        <h3 style="margin-top:10px" data-t="app.title">Safaringizni to'liq telefoningizdan boshqaring</h3>
+        <p data-t="app.text">Bronlar, to'lovlar, viza holati va yo'l-yo'riqlar — iOS va Android ilovamizda. Tez orada!</p>
       </div>
       <div class="store-btns">
-        <a href="#" class="store-btn" data-toast="Ilova tez orada App Store'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span>Yuklab olish<b>App Store</b></span></a>
-        <a href="#" class="store-btn" data-toast="Ilova tez orada Google Play'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.61 1.81 13.79 12 3.61 22.19c-.36-.2-.61-.6-.61-1.07V2.88c0-.47.25-.87.61-1.07zm11.6 11.6 2.86 2.86-11.07 6.36c-.5.29-1.08.28-1.55.04l9.76-9.26zm3.94-2.75 3.02 1.73c.99.57.99 2.05 0 2.62l-3.02 1.73-3.13-3.04 3.13-3.04zM5.39 1.33c.47-.24 1.05-.25 1.55.04l11.07 6.36-2.86 2.86-9.76-9.26z"/></svg><span>Yuklab olish<b>Google Play</b></span></a>
+        <a href="#" class="store-btn" id="app-store" data-toast="Ilova tez orada App Store'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span>Yuklab olish<b>App Store</b></span></a>
+        <a href="#" class="store-btn" id="google-play" data-toast="Ilova tez orada Google Play'da"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.61 1.81 13.79 12 3.61 22.19c-.36-.2-.61-.6-.61-1.07V2.88c0-.47.25-.87.61-1.07zm11.6 11.6 2.86 2.86-11.07 6.36c-.5.29-1.08.28-1.55.04l9.76-9.26zm3.94-2.75 3.02 1.73c.99.57.99 2.05 0 2.62l-3.02 1.73-3.13-3.04 3.13-3.04zM5.39 1.33c.47-.24 1.05-.25 1.55.04l11.07 6.36-2.86 2.86-9.76-9.26z"/></svg><span>Yuklab olish<b>Google Play</b></span></a>
       </div>
     </div>
   </div>
@@ -398,21 +381,20 @@
   <div class="container">
     <div class="top">
       <div>
-        <a href="#" class="logo"><img src="assets/logo.svg" alt=""><span>Umra<b>goo</b><small>Haj &amp; Umra platformasi</small></span></a>
-        <p class="about">Umragoo'da biz siz uchun mukammal va bezovtaliksiz imon safarini loyihalaymiz. Umra va haj paketlarini kashf eting, aviachipta va mehmonxonalarni bron qiling — qolgan barcha tafsilotlarni bizga qoldiring va ibodatingizga to'liq bag'ishlaning.</p>
-        <p class="motto">Sizga xizmat qilish — biz uchun sharaf va savob</p>
-        <div class="socials">
-          <a href="#" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+        <a href="#" class="logo"><img src="assets/logo.svg" alt=""><span>Umra<b>goo</b><small>Umra platformasi</small></span></a>
+        <p class="about" data-t="footer.about">Umragoo'da biz siz uchun mukammal va bezovtaliksiz imon safarini loyihalaymiz. Umra paketlarini kashf eting, aviachipta va mehmonxonalarni bron qiling — qolgan barcha tafsilotlarni bizga qoldiring va ibodatingizga to'liq bag'ishlaning.</p>
+        <p class="motto" data-t="footer.motto">Sizga xizmat qilish — biz uchun sharaf va savob</p>
+        <div class="socials" id="socials">
+          <a href="#" aria-label="Telegram" data-social="telegram"><svg><use href="#i-telegram"/></svg></a>
+          <a href="#" aria-label="Instagram" data-social="instagram"><svg><use href="#i-instagram"/></svg></a>
+          <a href="#" aria-label="Facebook" data-social="facebook"><svg><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="YouTube" data-social="youtube"><svg><use href="#i-youtube"/></svg></a>
         </div>
       </div>
       <div>
         <h4>Xizmatlarimiz</h4>
         <ul>
           <li><a href="#umra">Umra paketlari</a></li>
-          <li><a href="#haj">Haj paketlari</a></li>
           <li><a href="#aviachiptalar">Aviachiptalar</a></li>
           <li><a href="#mehmonxonalar">Mehmonxonalar</a></li>
           <li><a href="#vizalar">Vizalar</a></li>
@@ -442,13 +424,13 @@
       </div>
       <div>
         <h4>Biz bilan bog'laning</h4>
-        <ul class="contact">
+        <ul class="contact" id="footer-contacts">
           <li><svg><use href="#i-send"/></svg><a href="#" data-open="request">So'rov yuborish</a></li>
           <li><svg><use href="#i-headset"/></svg><span>Mijozlarni qo'llab-quvvatlash 24/7</span></li>
         </ul>
       </div>
     </div>
-    <div class="licenses">
+    <div class="licenses" id="footer-licenses">
       <span class="lic"><svg><use href="#i-shield"/></svg>Turizm qo'mitasi litsenziyasi</span>
       <span class="lic"><svg><use href="#i-check-circle"/></svg>Elektron tijorat ro'yxati</span>
       <span class="lic"><svg><use href="#i-file"/></svg>Davlat ro'yxatidan o'tgan</span>
@@ -456,7 +438,7 @@
       <span class="lic"><svg><use href="#i-clipboard"/></svg>STIR: 000 000 000</span>
     </div>
     <div class="bottom">
-      <span>© <span id="year"></span> Umragoo — Barcha huquqlar himoyalangan · Sabringiz uchun Alloh rozi bo'lsin</span>
+      <span>© <span id="year"></span> <span data-t="footer.copyright">Umragoo — Barcha huquqlar himoyalangan · Sabringiz uchun Alloh rozi bo'lsin</span></span>
       <div class="legal">
         <a href="#" data-toast="Sahifa tayyorlanmoqda">Maxfiylik siyosati</a>
         <a href="#" data-toast="Sahifa tayyorlanmoqda">Xizmat shartlari</a>
@@ -468,7 +450,7 @@
 <!-- ======== Suzuvchi tugmalar ======== -->
 <button class="fab-ai" id="fab-ai" aria-label="Aqlli yordamchi Rafiqni ochish">
   <span class="b"><svg><use href="#i-sparkles"/></svg><span class="ai">AI</span><span class="dot"></span></span>
-  <small>Rafiq</small>
+  <small data-t="chat.name">Rafiq</small>
 </button>
 <button class="to-top" id="to-top" aria-label="Yuqoriga"><svg><use href="#i-arrow-up"/></svg></button>
 
@@ -476,16 +458,16 @@
 <div class="chat" id="chat" hidden>
   <header>
     <span class="av"><svg><use href="#i-sparkles"/></svg></span>
-    <div><b>Rafiq · Aqlli yordamchi</b><span>Odatda bir daqiqada javob beradi</span></div>
+    <div><b id="chat-title">Rafiq · Aqlli yordamchi</b><span>Odatda bir daqiqada javob beradi</span></div>
     <button id="chat-close" aria-label="Yopish"><svg><use href="#i-x"/></svg></button>
   </header>
   <div class="msgs" id="chat-msgs">
-    <div class="msg bot">Assalomu alaykum! Men Rafiq — Umragoo yordamchisiman. Haj, umra, viza yoki mehmonxona bo'yicha savolingiz bo'lsa, bemalol so'rang 🕋</div>
+    <div class="msg bot" id="chat-greeting">Assalomu alaykum! Men Rafiq — Umragoo yordamchisiman. Umra, viza yoki mehmonxona bo'yicha savolingiz bo'lsa, bemalol so'rang 🕋</div>
   </div>
   <div class="quick" id="chat-quick">
     <button>Umra narxlari</button>
     <button>Viza qancha vaqt oladi?</button>
-    <button>Haj dasturlari</button>
+    <button>Mehmonxona narxlari</button>
     <button>Operator bilan bog'lanish</button>
   </div>
   <form id="chat-form">

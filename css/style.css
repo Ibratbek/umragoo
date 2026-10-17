@@ -62,6 +62,7 @@ p{margin:0}
 .topbar .left,.topbar .right{display:flex;align-items:center;gap:18px}
 .topbar svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px;color:var(--gold-300)}
 .topbar .bismillah{font-family:"Amiri","Readex Pro",serif;color:var(--gold-300);font-size:15px}
+.topbar a:hover{color:#fff}
 
 /* ---- header ---- */
 .header{position:sticky;top:0;z-index:60;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .2s}
@@ -191,6 +192,7 @@ p{margin:0}
 .route .line span{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted-fg);white-space:nowrap}
 .flight .price{text-align:right}
 .empty-state{text-align:center;padding:40px;border:1px dashed var(--border);border-radius:16px;color:var(--muted-fg);background:#fff}
+.grid>.empty-state{grid-column:1/-1}
 
 /* ---- poyezd banner ---- */
 .train-banner{border-radius:24px;overflow:hidden;position:relative;color:#fff;background:var(--gradient-hero);display:grid;grid-template-columns:1.2fr 1fr;min-height:260px}
@@ -279,6 +281,7 @@ p{margin:0}
 .footer .motto{margin-top:14px;color:var(--gold-300);font-family:"Amiri",serif;font-size:17px}
 .footer .contact li{display:flex;gap:10px;align-items:flex-start}
 .footer .contact svg{width:16px;height:16px;color:var(--gold-300);flex:none;margin-top:3px}
+.footer .contact a,.footer .contact span{overflow-wrap:anywhere}
 .socials{display:flex;gap:8px;margin-top:16px}
 .socials a{width:36px;height:36px;border-radius:10px;background:#ffffff14;display:grid;place-items:center;transition:.2s}
 .socials a:hover{background:var(--gold-500);color:var(--teal-950)}
@@ -339,6 +342,10 @@ label.f{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:
 label.f input,label.f select,label.f textarea{border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:0;font-weight:500;background:#fff;color:var(--fg);transition:.15s;width:100%}
 label.f input:focus,label.f select:focus,label.f textarea:focus{border-color:var(--teal-400);box-shadow:0 0 0 3px var(--teal-100)}
 .form-note{font-size:12px;color:var(--muted-fg);margin-top:10px}
+.form-error{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;line-height:1.45}
+.form-error a{text-decoration:underline;white-space:nowrap}
+.hp{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+.btn:disabled{opacity:.7;cursor:progress;transform:none;filter:none}
 .divider{display:flex;align-items:center;gap:10px;color:var(--muted-fg);font-size:12px;margin:16px 0}
 .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--border)}
 .success{text-align:center;padding:30px 10px}

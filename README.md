@@ -43,10 +43,26 @@ Parolni unutsangiz: `python3 server.py --password YANGI_PAROL`.
 | `assets/uploads/` | Admin paneldan yuklangan rasmlar |
 | `data/` | **Maxfiy**: parol xeshi, mijozlar so'rovlari, zaxira nusxalar. Git'ga qo'shilmaydi, internetdan ochilmaydi |
 
-## Internetga joylash
+## Internetga joylash (Render.com)
 
-Admin panel va formalar ishlashi uchun saytni `server.py` bilan **VPS/serverda** ishga tushiring
-(masalan, nginx orqasida HTTPS bilan): `python3 server.py --host 127.0.0.1 --port 8080`,
+Loyihada tayyor `render.yaml` bor — sayt, admin panel va doimiy disk bir martada sozlanadi.
+
+1. https://render.com/deploy?repo=https://github.com/Ibratbek/umragoo havolasini oching
+   (yoki Render paneli → **New → Blueprint** → shu repozitoriy).
+2. GitHub orqali kiring, repozitoriyga ruxsat bering, **Apply** ni bosing va to'lov kartasini ulang
+   (Starter tarif + 1 GB disk, taxminan 7 $/oy).
+3. Bir necha daqiqadan so'ng sayt `https://umragoo.onrender.com` (yoki Render bergan manzil)da ochiladi,
+   admin panel — `/admin/`.
+4. **Admin parol**: Render → umragoo → **Environment** → `UMRAGOO_ADMIN_PASSWORD` qiymati.
+   Kirgandan keyin Sozlamalarda o'zingiznikiga almashtiring.
+5. O'z domeningiz bo'lsa: Render → **Settings → Custom Domains**.
+
+Muhim: internetdagi saytning ma'lumotlari Render diskida saqlanadi. GitHub'ga yangi kod yuborilganda
+(avtomatik qayta joylanadi) admin paneldagi o'zgarishlar, so'rovlar va rasmlar saqlanib qoladi, lekin
+repozitoriydagi `js/data.js` endi faqat boshlang'ich nusxa. Kompyuteringizdagi o'zgarishlarni internetdagi
+saytga ko'chirish uchun: lokal admin → Sozlamalar → **JSON eksport**, keyin internetdagi admin → **JSON import** → Saqlash.
+
+O'z VPS serveringizda: `UMRAGOO_TRUST_PROXY=1 python3 server.py --host 127.0.0.1 --port 8080`,
 nginx esa `proxy_pass http://127.0.0.1:8080;` va `proxy_set_header X-Forwarded-Proto $scheme;` bilan.
 
 Faqat statik hosting (GitHub Pages, Netlify va h.k.) ishlatsangiz: sayt ochiladi, lekin admin panel va
